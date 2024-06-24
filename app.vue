@@ -90,6 +90,25 @@ const data = ref({
           label: 'UI/UX Design'
         }
       ]
+    },
+    {
+      key: '0_3',
+      type: 'person',
+      data: {
+        image: 'https://primefaces.org/cdn/primevue/images/avatar/stephenshaw.png',
+        name: 'Stephen Shaw',
+        title: 'CTO'
+      },
+      children: [
+        {
+          key: '0_1_01',
+          label: 'Development'
+        },
+        {
+          key: '0_1_11',
+          label: 'UI/UX Design'
+        }
+      ]
     }
   ]
 });
