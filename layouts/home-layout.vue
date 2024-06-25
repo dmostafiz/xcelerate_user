@@ -16,7 +16,7 @@
               <h1 class="font-semibold text-xl text-zinc-600">{{ title }}</h1>
             </div>
             <div>
-
+              <Avatar :image="auth?.avatar" shape="circle" />
             </div>
           </div>
 
@@ -35,7 +35,7 @@
 
 // defineProps(['title'])
 const title = useAttrs().title
-
+const auth = useAuthStore()
 </script>
 
 <style></style>

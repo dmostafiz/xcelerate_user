@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     '@pinia-plugin-persistedstate/nuxt',
     "@nuxt/image"
   ],
+
   runtimeConfig: {
     public: {
       API_SERVER: process.env.API_SERVER,
@@ -21,6 +22,8 @@ export default defineNuxtConfig({
   imports: {
     dirs: ['stores']
   },
+
+  css: ['primeicons/primeicons.css'],
 
   primevue: {
     options: {
