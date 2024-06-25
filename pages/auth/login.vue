@@ -1,11 +1,12 @@
 <template>
   <div class="h-screen bg-black bg-[url('https://www.go20x.com/img/hero-bg-img.png')]">
-    <div class="xl:h-full flex flex-col xl:flex-row">
-      <div class="xl:w-[55%] xl:h-full bg-cover">
 
-        <div class="p-5 xl:p-16">
-          <NuxtImg width="100px" src="https://www.go20x.com/icons/nav-logo.svg" />
-        </div>
+    <div class="p-10">
+      <NuxtImg width="80px" src="https://www.go20x.com/icons/nav-logo.svg" />
+    </div>
+
+    <div class="flex flex-col xl:flex-row">
+      <div class="xl:w-[55%] bg-cover">
 
       </div>
       <div class="flex-1">
