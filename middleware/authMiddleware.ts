@@ -14,11 +14,11 @@ export default defineNuxtRouteMiddleware(async (ctx) => {
     }
 
     const { $axios } = useNuxtApp()
-    const { data } = await $axios(token.value).post('/auth/authenticate')
+    const res = await $axios(token.value).post('/auth/authenticate')
 
-    if (data?.user) {
-        console.log('user data: ', data?.user?.email)
-        authStore.addUser(data.user)
+    if (res?.data?.user) {
+        console.log('user data: ', res?.data?.user?.email)
+        authStore.addUser(res?.data.user)
     } else {
         authStore.removeUser()
         return navigateTo('/auth', {
