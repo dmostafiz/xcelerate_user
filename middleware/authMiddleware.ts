@@ -21,7 +21,7 @@ export default defineNuxtRouteMiddleware(async (ctx) => {
         authStore.addUser(res?.data.user)
     } else {
         authStore.removeUser()
-        return navigateTo('/auth', {
+        return navigateTo('/auth/login', {
             replace: true,
         })
     }

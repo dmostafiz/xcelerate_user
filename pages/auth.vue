@@ -1,6 +1,7 @@
 <template>
   <div>
-    auth page
+    <NuxtPage />
+    <Toast />
   </div>
 </template>
 

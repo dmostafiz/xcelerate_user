@@ -9,7 +9,8 @@ export default defineNuxtConfig({
     'nuxt-primevue',
     "@nuxtjs/tailwindcss",
     '@pinia/nuxt',
-    '@pinia-plugin-persistedstate/nuxt'
+    '@pinia-plugin-persistedstate/nuxt',
+    "@nuxt/image"
   ],
   runtimeConfig: {
     public: {
