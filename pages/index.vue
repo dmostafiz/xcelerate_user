@@ -1,10 +1,6 @@
 <template>
-<NuxtLayout name="home-layout">
-
-  <NuxtPage />
-  <p>Logged in as: {{ authStore.email }}</p>
-
-</NuxtLayout>
+    <NuxtPage ref="page" />
+    
 </template>
 
 <script setup>
@@ -12,8 +8,11 @@
 definePageMeta({
   middleware: ['auth-middleware']
 })
+const page = ref()
 
 const authStore = useAuthStore()
+
+console.log('page: ', page)
 
 </script>
 

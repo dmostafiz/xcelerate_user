@@ -1,15 +1,16 @@
 <template>
-  <div>
+  <NuxtLayout name="home-layout" title="Home">
     Home Page
-    
-  </div>
+
+  </NuxtLayout>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 const authStore = useAuthStore()
 
+defineExpose({
+  title: 'Home page expose'
+})
 </script>
 
-<style>
-
-</style>
+<style></style>

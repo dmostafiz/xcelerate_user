@@ -2,7 +2,7 @@
   <div class="h-screen bg-black bg-[url('https://www.go20x.com/img/hero-bg-img.png')]">
 
     <div class="p-10">
-      <NuxtImg width="80px" src="https://www.go20x.com/icons/nav-logo.svg" />
+      <NuxtImg width="100px" src="https://www.go20x.com/icons/nav-logo.svg" />
     </div>
 
     <div class="flex flex-col xl:flex-row">
@@ -12,7 +12,7 @@
       <div class="flex-1">
         <div class="w-full h-full p-5 xl:p-16 flex items-center justify-center">
           <form @submit.prevent="submitLogin">
-            <Card class="">
+            <Card class="rounded-md">
               <template #title>Sign in</template>
               <template #content>
                 <div class="flex flex-col gap-1 mb-3">

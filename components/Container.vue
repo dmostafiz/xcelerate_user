@@ -1,0 +1,5 @@
+<template>
+    <div class="px-12">
+        <slot />
+    </div>
+</template>
