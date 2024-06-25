@@ -1,7 +1,7 @@
 <template>
   <div class="flex">
     <div class="w-[300px] h-screen gap-2 border-r">
-      <div class="p-2 flex items-center justify-center">
+      <div class="flex items-center justify-center">
         <Image class="w-[180px]" src="https://www.shopxcelerate.com/main-logo-black.png" />
       </div>
       <div class="p-5">
