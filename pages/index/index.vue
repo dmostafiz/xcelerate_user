@@ -1,5 +1,5 @@
 <template>
-  <NuxtLayout name="home-layout" title="Index">
+  <NuxtLayout name="home-layout" title="Home">
     <p>Logged in as: {{ authStore.email }}</p>
   </NuxtLayout>
 </template>

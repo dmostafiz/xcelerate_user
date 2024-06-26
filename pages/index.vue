@@ -10,10 +10,6 @@ definePageMeta({
 })
 const page = ref()
 
-const authStore = useAuthStore()
-
-console.log('page: ', page)
-
 </script>
 
 <style></style>
