@@ -1,14 +1,12 @@
 <template>
   <NuxtLayout>
-    <NuxtPwaManifest />
     <NuxtRouteAnnouncer />
     <NuxtLoadingIndicator />
+    <NuxtPwaManifest />
     <NuxtPage />
   </NuxtLayout>
 </template>
 
 <script setup>
-
-const accessToken = useCookie('accessToken')
 
 </script>

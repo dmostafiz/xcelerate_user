@@ -1,4 +1,5 @@
 import path from 'path'
+import icons from './public/icons.js'
 
 export default defineNuxtConfig({
   devtools: { enabled: false },
@@ -34,7 +35,35 @@ export default defineNuxtConfig({
   },
 
   pwa: {
-    
-  }
+    strategies: 'injectManifest',
+    srcDir: 'service-worker',
+    filename: 'sw.ts',
+    registerType: 'autoUpdate',
+    manifest: {
+      name: 'Xcelerate International',
+      short_name: 'XcelerateInternational',
+      theme_color: '#ffffff',
+      icons: icons,
+    },
+    workbox: {
+      globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
+    },
+    injectManifest: {
+      globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
+    },
+    client: {
+      installPrompt: true,
+      // you don't need to include this: only for testing purposes
+      // if enabling periodic sync for update use 1 hour or so (periodicSyncForUpdates: 3600)
+      periodicSyncForUpdates: 20,
+    },
+    devOptions: {
+      enabled: true,
+      suppressWarnings: true,
+      navigateFallback: '/',
+      navigateFallbackAllowlist: [/^\/$/],
+      type: 'module',
+    },
+  },
 
 })
