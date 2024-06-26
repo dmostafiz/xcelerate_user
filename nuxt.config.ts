@@ -35,10 +35,10 @@ export default defineNuxtConfig({
   },
 
   pwa: {
-    strategies: 'injectManifest',
-    srcDir: 'service-worker',
-    filename: 'sw.ts',
-    registerType: 'autoUpdate',
+    // strategies: 'injectManifest',
+    // srcDir: 'service-worker',
+    // filename: 'sw.ts',
+    // registerType: 'autoUpdate',
     manifest: {
       name: 'Xcelerate International',
       short_name: 'XcelerateInternational',
@@ -46,22 +46,23 @@ export default defineNuxtConfig({
       icons: icons,
     },
     workbox: {
-      globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
+      // globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
+      navigateFallback: '/'
     },
-    injectManifest: {
-      globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
-    },
-    client: {
-      installPrompt: true,
-      // you don't need to include this: only for testing purposes
-      // if enabling periodic sync for update use 1 hour or so (periodicSyncForUpdates: 3600)
-      periodicSyncForUpdates: 20,
-    },
+    // injectManifest: {
+    //   globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
+    // },
+    // client: {
+    //   installPrompt: true,
+    //   // you don't need to include this: only for testing purposes
+    //   // if enabling periodic sync for update use 1 hour or so (periodicSyncForUpdates: 3600)
+    //   periodicSyncForUpdates: 20,
+    // },
     devOptions: {
       enabled: false,
-      suppressWarnings: true,
-      navigateFallback: '/',
-      navigateFallbackAllowlist: [/^\/$/],
+      // suppressWarnings: true,
+      // navigateFallback: '/',
+      // navigateFallbackAllowlist: [/^\/$/],
       type: 'module',
     },
   },
