@@ -10,7 +10,8 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
-    "@nuxt/image"
+    "@nuxt/image",
+    "@vite-pwa/nuxt"
   ],
 
   runtimeConfig: {
@@ -31,5 +32,9 @@ export default defineNuxtConfig({
     },
     importPT: { from: path.resolve(__dirname, './presets/aura/') }
   },
+
+  pwa: {
+    
+  }
 
 })
