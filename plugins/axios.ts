@@ -3,7 +3,7 @@ import axios from 'axios'
 
 export default defineNuxtPlugin(() => {
     const config = useRuntimeConfig()
- 
+
     return {
         provide: {
             axios: (accessToken: any = null) => {
@@ -11,13 +11,17 @@ export default defineNuxtPlugin(() => {
                 const token = useCookie('accessToken', {
                     watch: 'shallow'
                 })
+
+                const bearerToken = `Bearer ${accessToken || token.value}`
+
+                console.log('token from axios: ', bearerToken)
                 
                 let createAxios = axios.create({
                     withCredentials: true,
                     baseURL: config.public.API_SERVER,
                     headers: {
                         'Content-Type': 'application/json',
-                        Authorization: `Bearer ${accessToken || token.value}`
+                        Authorization: bearerToken
                     }
                 });
 

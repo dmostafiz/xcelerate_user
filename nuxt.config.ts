@@ -58,7 +58,7 @@ export default defineNuxtConfig({
       periodicSyncForUpdates: 20,
     },
     devOptions: {
-      enabled: true,
+      enabled: false,
       suppressWarnings: true,
       navigateFallback: '/',
       navigateFallbackAllowlist: [/^\/$/],
