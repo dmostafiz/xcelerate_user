@@ -7,7 +7,7 @@
       <HomeSidebarMenuItems />
     </Sidebar>
 
-    <Button icon="pi pi-arrow-right" severity="contrast" text rounded @click="visible = true" />
+    <Button icon="pi pi-arrow-right" severity="secondary" text rounded @click="visible = true" />
   </div>
 
 </template>

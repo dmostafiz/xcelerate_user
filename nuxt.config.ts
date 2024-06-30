@@ -12,7 +12,9 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
     "@nuxt/image",
-    "@vite-pwa/nuxt"
+    "@vite-pwa/nuxt",
+    "vuetify-nuxt-module",
+    "@nuxt/icon"
   ],
 
   runtimeConfig: {
